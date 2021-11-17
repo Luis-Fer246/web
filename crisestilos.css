@@ -1,112 +1,123 @@
-/* esta es mi archivo de estilos */
-body{
-    /*background-color: #004080;*/
-    background-image: url("tapiz1.jpg");
-    /* Centramos el fondo horizontal y verticalmente */
-    background-position: center center;
-         /* El fonde no se repite */
-    background-repeat: no-repeat;
-         /* Fijamos la imagen a la ventana para que no supere el alto de la ventana */
-    background-attachment: fixed;
-         /* El fonde se re-escala automáticamente */
-    background-size: cover;
-         /* Color de fondo si la imagen no se encuentra o mientras se está cargando */
-    background-color: #FFF;
-         /* Fuente para el texto */
-    text-align: center;
-    color: #000;
-    font-family: "Times New Roman", Times, serif;
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
 }
-h1 {
-    font-family: sans-serif; 
-    font-size: 18px; 
-    font-size: 3.0rem;
-    font-weight: 400; 
-    border: 3px solid #333333;
-    background:#ee0467;
+    body{
+    background-color:whitesmoke;
+    color:black ;
+    margin-top: 0;
+    }
+    nav{
+        position: fixed;
+        width: 100vw;
+        display: flex;
+        background: #E85860;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 80px;
+        height: 100px;
+
+
+    }
+    .menu{
+        font-size: 20px;
+    }
     
+    .menu a{
+        color: #333;
+        text-decoration: none;
+        font-weight: 600;
+        margin-left: 30px;
+        transition: color 1s;
+        width: 100%;
+    }
     
-}
-h2, footer {
-        font-family: sans-serif; 
-        font-size: 18px; 
-        font-size: 2.5rem;
-        font-weight: 400; 
-        border: 3px solid #333333;
-        background:#ee0467;
-        
-        
-  }
-  
-  body,html {
-    height: 100%;
-  } 
-h1{
+    .menu a:hover{
+        color: #13258a;
+    }
+    
+    .logo {
+        width: 50px; 
+        height: 50px;
+    }
+    /* ESTILOS DE LA PAGINA EN GENERAL */
+
+    /* tablas /*/
+    .tablas h2{
+    padding: 30px;
     text-align: center;
-    font-family: times new roman;
-}
-a:link{
-    color: rgb(10, 46, 248) ;
-}
-a:visited{
-    background-color:  #e6f2ff;
-    color:yellowgreen ;
-
-}
-a:hover{
-    background-color:  #e6f2ff;
-
-}
-a:active{
-    color: indianred;
 }
 
-div{
-        margin-left: 10%;
-        margin-right: 10%;
-        font-size: 1.5rem;
-        border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-        border: 3px solid #333333;
-        width: 80%;
-        background: #71e26d;
+    /* ESTILOS PARA EL MENU DESPLEGABLE */
+    .btn {
+        display: none;
+        position: absolute;
+        right: 20px;
+    }
+    .btn:hover > span {
+        background-color: #faf8f8;
+    }
+    .btn span {
+        display: block;
+        margin: 6px;
+        width: 40px;
+        height: 3px;
+        background: #333;
+    }
+    .textbox {
+        border: 1px solid ;
+        margin: 0 auto;
+        width: 70%;
+        padding: 120px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .texttop {
         text-align: center;
-}
-.h3 {
-    padding: 2rem 4rem;
-    display: inline-block;
-    border: 3px solid #333333;
-    font-size: 2.5rem;
-    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-    text-transform: uppercase;
-    letter-spacing: 0.3ch;
-    background: #71e26d;
-    position: relative;
-}
-/* menu */
-a {
-  color: #F00;
-  text-decoration: none;
-}
-
-a:visited {
-  color: #0A0;
-}
-
-a:hover {
-  color: #FFF;
-  background-color: #F00;
-  text-decoration: underline;
-}
-
-a:focus {
-  color: #00F;
-  text-decoration: underline;
-}
-
-a:active {
-  color: #F60;
-  background-color: #FFF;
-}
-img {  
-    border-radius: 5px;
-}
+        font-size: 20px;
+    }
+    .textimagen{
+        a: center;
+    }
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        background: #E85860;
+        height: 80px;
+        padding: 0 80px;
+    }
+    @media only screen and (max-width: 850px){
+            nav {
+            overflow: visible;
+        }
+        .menu {
+            position: relative;
+            width: 100vw;
+            right: 0;
+            top: 80px;
+            background: #f1f1f1E6;
+            overflow: hidden;
+            max-height: 0;
+        }
+        .menu a{
+            display: block;
+            text-align: center;
+            padding: 10px;
+            margin: 0;
+        }
+        .btn {
+            display: block;
+            cursor: pointer;
+        }
+        .show {
+            max-height: 500px;
+        }
+    }
+    
