@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-">
+    <title>Edad real del perro</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <script type="text/javascript" src="js/java.js"> </script>
+</head>
+<body>
+    <main class="cont">
+        <section class="contenedor">
+            <div class="titulo">
+                Edad real de tu perro
+            </div>
+            <div class="imagen">
+                <img src="img/gatito.jpeg">
+                 </div>
+            <form>
+                <div class="caja">
+                    <div class="box">
+                        <span class="detalle">Años de tu Perro</span>
+                        <input type="text" id="años" name="años" placeholder="ingrese los años del perro"required>
+                    </div>
+                    <div class="box">
+                        <span class="detalle">La edad en mito</span>
+                        <input type="number" disabled="disabled" id="edad-falsa" placeholder="la edad de tu perro en mito es"required>
+                    </div>
+                    <div class="box">
+                        <span class="detalle">La edad real del perro</span>
+                        <input type="number" disabled="disabled" id="edad-real" placeholder="la edad de tu perreo real es"required>
+                    </div>
+                    <div class="boton">
+                        <input type="button" id="calcular" value="calcular" onclick="capturar()">
+                    </div>
+                </div>       
+            </form>
+        </section>
+    </main>
+
+    
+</body>
+</html>
